@@ -1,8 +1,17 @@
-### DUMP
-
-Acessar por ssh o servidor
-Entra no usuario do Postgres
+### Entra no usuario do Postgres
 $ sudo su - postgres
+
+### Criar um BD com User
+$ psql
+# CREATE DATABASE bd;
+# CREATE USER adminuser WITH PASSWORD 'password';
+# ALTER ROLE adminuser SET client_encoding TO 'utf8';
+# ALTER ROLE adminuser SET default_transaction_isolation TO 'read committed';
+# ALTER ROLE adminuser SET timezone TO 'UTC';
+# GRANT ALL PRIVILEGES ON DATABASE bd TO adminuser;
+# \q
+
+### DUMP e Restore
 
 Rodar o comando do dump
 $ pg_dump bd > nome_do_dump
@@ -16,8 +25,11 @@ $ sudo cp /var/lib/postgresql/nome_do_dump /home/user/
 Envia pra sua maquina:
 $ scp nome_do_dump user@0.0.0.0:/home/user/
 
+Restore Dump
+$ psql bd < /home/user/nome_do_dump
 
-# Comandos Basicos
+
+### Comandos Basicos
 
 Lista Bancos:
 $ psql /l
