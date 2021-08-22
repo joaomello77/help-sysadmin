@@ -11,7 +11,7 @@ Sai do usuario Postgres
 $ exit
 
 Copia o arquivo de dump pra home do adminsyst:
-$ sudo cp /var/lib/postgresql/nome_do_dump /home/user/nome_do_dump
+$ sudo cp /var/lib/postgresql/nome_do_dump /home/user/
 
 Envia pra sua maquina:
 $ scp nome_do_dump user@0.0.0.0:/home/user/
