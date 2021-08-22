@@ -15,3 +15,15 @@ $ sudo cp /var/lib/postgresql/nome_do_dump /home/user/nome_do_dump
 
 Envia pra sua maquina:
 $ scp nome_do_dump user@0.0.0.0:/home/user/
+
+
+# Comandos Basicos
+
+Lista Bancos:
+$ psql /l
+
+Selecionar um BD:
+$ psql -d bd
+
+Lista Tabelas de um BD
+bd=# \dt
