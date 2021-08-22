@@ -27,3 +27,6 @@ $ psql -d bd
 
 Lista Tabelas de um BD
 bd=# \dt
+
+Exit
+bd=# \q
